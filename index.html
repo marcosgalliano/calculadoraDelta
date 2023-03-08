@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css" type="text/css">
     <title>calculator</title>
@@ -17,17 +20,21 @@
     </div>
 	
 	<form id="menuForm">
-        <h1>HAMBURGUESAS</h1>
+        <div class="cuadrados">
+            <h1>HAMBURGUESAS</h1>
 
-		<label for="hamburguesaSimple">Hamburguesa simple <h6 id="precioSimple"></h6></label>
-		<input type="number" id="hamburguesaSimple" name="hamburgers" value="0"><br>
+            <label for="hamburguesaSimple">Hamburguesa simple <h6 id="precioSimple"></h6></label>
+            <input type="number" id="hamburguesaSimple" name="hamburgers" value="0"><br>
+            
+            <label for="hamburguesaCompleta">Hamburguesa Completa <h6 id="precioCompleta"></h6></label>
+            <input type="number" id="hamburguesaCompleta" name="hamburgers" value="0"><br>
+            
+            <label for="hamburguesaCompleta">Hamburguesa DobleC <h6 id="precioDobleC"></h6></label>
+            <input type="number" id="hamburguesadobleC" name="hamburgers" value="0"><br>
+            
+        </div>
 
-        <label for="hamburguesaCompleta">Hamburguesa Completa <h6 id="precioCompleta"></h6></label>
-		<input type="number" id="hamburguesaCompleta" name="hamburgers" value="0"><br>
-
-        <label for="hamburguesaCompleta">Hamburguesa DobleC <h6 id="precioDobleC"></h6></label>
-		<input type="number" id="hamburguesadobleC" name="hamburgers" value="0"><br>
-
+        <div class="cuadrados">
         <div class="tituloComida">
             <h1>SANDWICHES</h1>
         </div>
@@ -37,13 +44,44 @@
 
         <label for="hamburguesaCompleta">Sandwich Lomo<h6 id="precioLomo"></h6></label>
 		<input type="number" id="sandwichLomo" name="sandwich" value="0"><br>
-		
 
+        </div>
+
+        <div class="cuadrados">
+        <div class="tituloComida">
+            <h1>PAPAS FRITAS</h1>
+        </div>
 		
-		<button type="button" onclick="calculateTotal()">Calcular Total</button>
+        <label for="hamburguesaCompleta">Cono de Papas<h6 id="precioCono"></h6></label>
+		<input type="number" id="cono" name="fritas" value="0"><br>
+
+        <label for="hamburguesaCompleta">Cono de Papas c/cheddar<h6 id="precioConoCC"></h6></label>
+		<input type="number" id="conoCC" name="fritas" value="0"><br>
+
+        <label for="hamburguesaCompleta">SalchiPapa<h6 id="preciosalchi"></h6></label>
+		<input type="number" id="salchi" name="fritas" value="0"><br>
+		
+        </div>
+
+
+        <div class="cuadrados">
+        <div class="tituloComida">
+            <h1>BEBIDAS</h1>
+        </div>
+
+        <label for="hamburguesaCompleta">Bebidas<h6>$350</h6></label>
+		<input type="number" id="bebida" name="bebida" value="0"><br>
+
+        <label for="hamburguesaCompleta">Cervezas<h6>$600</h6></label>
+		<input type="number" id="cerveza" name="bebida" value="0"><br>
+
+        </div>
+
+        <button type="button" class="btn btn-info" onclick="calculateTotal()">Calcular</button>
 	</form>
-	
-	<p id="totalCost"></p>
+	<div class="total">
+        <p id="totalCost"></p>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>
